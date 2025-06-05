@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/spectral/v7/rnCr-xNNww_2s0amA9M9knj-SA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+ 
+*{
+    font-family: myFirstFont;
+}
+body{
+    font-family: Arial;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+.mainBody {
+    max-width: 80%;
+    margin: auto;
+}
+.image {
+    max-width: 5%;
+}
+.titleSection{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.tableSection td:nth-child(1){
+    font-weight: bold;
+    
+}
+.tableSection th{
+    text-transform: capitalize;
+}
+.tableSection th, .tableSection td{
+    border: 2px solid #AB966F;
+    border-radius: 4px;
+    text-align: center;
+}
+.tableSection img{
+    max-width: 200px;
+}
+.searchForm{
+    width: 20%;
+}
+.searchInput{
+    width: 100%;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #AB966F;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.button{
+    width: 100%;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid #AB966F;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: #181818;
+}
+.damageIcon{
+    height: 16px;
+    width: 16px;
+}

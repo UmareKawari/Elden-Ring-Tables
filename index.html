@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css"></link>
+    <h1>
+        <div class="titleSection">
+            <image src="images/logo.png" class="image"></image>
+            <span>Elden Ring API</span>
+        </div>
+    </h1>
+</head>
+
+<body class="mainBody">
+    <form id="searchForm" class="searchForm">
+        <div class="searchInput">
+            <div>
+                <input type="text" id="Name" name="Name" placeholder="Name" class="searchInput">
+            </div>
+            <div>
+                <input type="text" id="Description" name="Description" placeholder="Description" class="searchInput">
+            </div>
+        </div>
+        <button type="submit" id="Submit" class="button">Search</button>
+    </form>
+    <ul id="Results"></ul>
+</body>
+
+<script src="Script.js"></script>
+</html>
