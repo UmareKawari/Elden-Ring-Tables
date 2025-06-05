@@ -60,17 +60,6 @@ const fetchAllItems = async () => {
                         if (typeof obj === 'object') {
                             //console.log("Found Object");
                             let objectValues = Object.values(obj).join(' ');
-                            //console.log("Found Object");
-                            if (obj.hasOwnProperty('name')) {
-                                if (obj.name === 'Phy') {
-                                    console.log("Found Object");
-                                    //const newTd = document.createElement("td");
-                                    const img = document.createElement('img');
-                                    img.src = "physical-damage.png";
-                                    cell.appendChild(img);
-                                    console.log(cell)
-                                }
-                            }
                             return objectValues;
                         }
                         return obj;
