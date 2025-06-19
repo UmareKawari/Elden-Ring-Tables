@@ -26,6 +26,7 @@ const fetchAllItems = async () => {
             const table = generateTable(results);
             table.setAttribute("class", "tableSection");
             document.body.appendChild(table);
+            textImages();
         }
     })
 
@@ -54,11 +55,9 @@ const fetchAllItems = async () => {
                     img.src = value;
                     cell.appendChild(img);
                 }
-                //Removing here?
                 else if (Array.isArray(value)) {
                     cell.textContent = value.map(obj => {
                         if (typeof obj === 'object') {
-                            //console.log("Found Object");
                             let objectValues = Object.values(obj).join(' ');
                             return objectValues;
                         }
@@ -78,6 +77,7 @@ const fetchAllItems = async () => {
         const table = generateTable(allItems);
         table.setAttribute("class", "tableSection");
         document.body.appendChild(table);
+        textImages();
     }
     renderTable();
 
@@ -124,12 +124,12 @@ const fetchAllItems = async () => {
     }
 
     // Adding loop here:
-    insertImageAfterText('tableID', 'Phy', 'images/physical-damage.png', 'Physical Damage Icon');
-    insertImageAfterText('tableID', 'Mag', 'images/magic-damage.png', 'Magic Damage Icon');
-    insertImageAfterText('tableID', 'Fire', 'images/fire-damage.png', 'Fire Damage Icon');
-    insertImageAfterText('tableID', 'Ligt', 'images/lightning-damage.png', 'Lightning Damage Icon');
-    insertImageAfterText('tableID', 'Holy', 'images/holy-damage.png', 'Holy Damage Icon');
+    function textImages() {
+        insertImageAfterText('tableID', 'Phy', 'images/physical-damage.png', 'Physical Damage Icon');
+        insertImageAfterText('tableID', 'Mag', 'images/magic-damage.png', 'Magic Damage Icon');
+        insertImageAfterText('tableID', 'Fire', 'images/fire-damage.png', 'Fire Damage Icon');
+        insertImageAfterText('tableID', 'Ligt', 'images/lightning-damage.png', 'Lightning Damage Icon');
+        insertImageAfterText('tableID', 'Holy', 'images/holy-damage.png', 'Holy Damage Icon');
+    }
 }
 fetchAllItems().catch(error => console.error('Error fetching data:', error));
-
-document.addEventListener("DOMContentLoaded", renderTable);
